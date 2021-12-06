@@ -1,7 +1,7 @@
 # Final Assignment
 
 Sine waves form the foundations of many concepts in physics and signal processing.
-Today we are going to use CPP to generate sinwaves.
+Today we are going to use CPP to generate sine waves.
 
 [Sine Waves](https://en.wikipedia.org/wiki/Sine_wave)
 
@@ -12,7 +12,7 @@ $$y(t)=A\cos(2\pi ft+\varphi)$$
 
 where:
 
-- $A$, is the aplitude
+- $A$, is the amplitude
 - $f$ , is the ordinary frequency
 - $\omega=2\pi f$, is the angular frequency
 - $\varphi$, is the phase
@@ -23,7 +23,7 @@ set of signals.
 ## Problem 1
 
 As a first step we need to create a function that generates a time range for our signals.
-Write a function that generates a squence of time values from an intial time $t_0$ to a
+Write a function that generates a sequence of time values from an initial time $t_0$ to a
 final time $t_f$ using $N$ points.
 
 ```cpp
@@ -39,7 +39,7 @@ vector<double> time(double t0,double t1,int N){
 
 ## Problem 2
 
-Now we can move on to write functions that generates our sinusodial signals.  Write two functions
+Now we can move on to write functions that generate our sinusoidal signals.  Write two functions
 that implement the above formulas. The functions should take in a `vector<double>` representing the time and return a `vector<double>` of the corresponding values.  You will also input $A$,$f$ and the $\varphi$.
 
 
@@ -95,7 +95,7 @@ vector<double> subtract_signals(const vector<double> &a,const vector<double> &b)
 
 ### Testing
 
-In order to test the implementation create the following fuctions
+In order to test the implementation create the following functions
 
 - $f_7(t)=f_1(t)+f_2(t)$
 - $f_8(t)=f_1(t)+f_2(t)$
@@ -105,7 +105,7 @@ In order to test the implementation create the following fuctions
 ## Problem 4 Challenge Problem
 
 In this last problem we will write a function that creates a square wave.  Write that squares an
-input signal.  Your function should measure the amplitude of the incoming signal.  Then if a value $f(t)>0$ set the value to $+A$.  If the value is $f(i)<0$ set corresonding value to $-A$. If $f(t)=0$ set the value to $0$.
+input signal.  Your function should measure the amplitude of the incoming signal.  Then if a value $f(t)>0$ set the value to $+A$.  If the value is $f(i)<0$ set corresponding value to $-A$. If $f(t)=0$ set the value to $0$.
 
 ```cpp
 vector<double> square_wave(const vector<double> &input){
@@ -123,9 +123,9 @@ Apply the square function to any of your functions to check the implementation.
 
 ## The main program
 
-You can download all the source code at.
+You can download all the source code at [EET110 Signals](https://github.com/ahurta92/EET110-Signals/.)
 
-You can write all your code in the follwing main program.  In its present state the program is
+You can write all your code in the following main program.  In its present state the program 
 is designed to print your data to csv file "data.csv". This should help you in testing that your program works correctly.  Use your favorite program to plot the data to make sure your program generates the correct values.
 
 ```cpp
@@ -175,6 +175,7 @@ int main() {
    auto data= {t,f,f1,f2,f3,f4,f5,f6,f7,f8,f8,f10};// you can add functions here
 
     writeSignalsToFile(t,data,"testing.csv");
-    // you can check the output in excel
+    // you can check the output in Excel
 
 }
+```
