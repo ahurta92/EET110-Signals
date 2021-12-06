@@ -180,4 +180,4 @@ int main() {
 }
 ```
 
-# HAVE FUN
+# HAVE FUN ! :)
